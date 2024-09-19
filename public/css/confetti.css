@@ -1,0 +1,37 @@
+/* Confeti */
+.confetti-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 9999; /* Asegura que el confeti esté sobre otros elementos */
+}
+
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #ff5733;
+    opacity: 0.7;
+    animation: fall 3s linear infinite;
+}
+
+.confetti1 { background-color: #f4b400; left: 20%; }
+.confetti2 { background-color: #9f00f4; left: 40%; }
+.confetti3 { background-color: #33c3ff; left: 60%; }
+.confetti4 { background-color: #ff5733; left: 80%; }
+.confetti5 { background-color: #84fab0; left: 50%; }
+
+@keyframes fall {
+    0% {
+        transform: translateY(-100px) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
