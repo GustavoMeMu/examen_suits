@@ -1,6 +1,6 @@
 <?php
-require_once "./app/config/dependencias/dependencias.php";
-require_once "./app/controller/login.php";
+    require_once "./app/config/dependencias/dependencias.php";
+    require_once "./app/controller/login.php";
 ?>
 
 <!DOCTYPE html>
@@ -11,6 +11,7 @@ require_once "./app/controller/login.php";
     <title>Iniciar Sesión</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="<?=CSS.'login-style.css';?>">
+
 </head>
 <body>
     <div class="container">
@@ -21,12 +22,9 @@ require_once "./app/controller/login.php";
                         <h4 class="text-center">Iniciar Sesión</h4>
                     </div>
                     <div class="card-body">
-                        <?php if (isset($error)): ?>
-                            <div class="alert alert-danger text-center"><?= htmlspecialchars($error); ?></div>
-                        <?php endif; ?>
                         <form action="login.php" method="post">
                             <div class="form-group">
-                                <label for="email">Correo electrónico:</label>
+                                <label for="loginEmail">Correo electrónico:</label>
                                 <input type="email" class="form-control" id="email" name="email" required>
                             </div>
                             <div class="form-group">
@@ -35,7 +33,8 @@ require_once "./app/controller/login.php";
                             </div>
                             <div class="text-center">
                                 <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
-                                <br><br>
+                                <br>
+                                <br>
                                 <a href="registro.php" class="btn btn-dark">Registrarse</a>
                             </div>
                         </form>
@@ -44,5 +43,7 @@ require_once "./app/controller/login.php";
             </div>
         </div>
     </div>
+
+
 </body>
 </html>

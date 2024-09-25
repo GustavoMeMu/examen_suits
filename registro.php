@@ -1,6 +1,6 @@
 <?php
-require_once "./app/config/dependencias/dependencias.php";
-require_once "./app/controller/registro.php";
+    require_once "./app/config/dependencias/dependencias.php";
+    require_once "./app/controller/registro.php";
 ?>
 
 <!DOCTYPE html>
@@ -10,20 +10,19 @@ require_once "./app/controller/registro.php";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="<?=CSS.'login-style.css';?>">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="<?=CSS.'registro-style.css';?>">
+
 </head>
 <body>
     <div class="container">
-        <div class="row justify-content-end mt-5">
+        <div class="row justify-content-center mt-5">
             <div class="col-md-6">
                 <div class="card">
                     <div class="card-header">
-                        <h4 class="text-center">Registro</h4>
+                        <h3 class="text-center">Registro</h3>
                     </div>
                     <div class="card-body">
-                        <?php if (isset($error)): ?>
-                            <div class="alert alert-danger text-center"><?= htmlspecialchars($error); ?></div>
-                        <?php endif; ?>
                         <form action="registro.php" method="post">
                             <div class="form-group">
                                 <label for="nombre">Nombre:</label>
@@ -42,9 +41,7 @@ require_once "./app/controller/registro.php";
                                 <input type="password" class="form-control" id="password" name="password" required>
                             </div>
                             <div class="text-center">
-                                <button type="submit" class="btn btn-primary">Registrarse</button>
-                                <br><br>
-                                <a href="login.php" class="btn btn-dark">Iniciar Sesión</a>
+                                <button type="submit" class="btn btn-dark">Registrarse</button>
                             </div>
                         </form>
                     </div>
@@ -52,5 +49,6 @@ require_once "./app/controller/registro.php";
             </div>
         </div>
     </div>
+
 </body>
 </html>

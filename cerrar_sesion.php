@@ -1,8 +1,9 @@
 <?php
-session_start();
-session_unset();
-session_destroy();
 
-header("Location: login.php");
-exit();
+session_start();//Permite trabajar con sesiones 
+session_unset();//Libera la sesion actual
+session_destroy();//Destruye las variables de sesion
+
+header("location:login.php");
+
 ?>
