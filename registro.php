@@ -68,7 +68,7 @@ require_once "./app/controller/registro.php";
                             </div>
                             <br>
                             <div class="text-center">
-                                <a href="login.php" class="btn btn-secondary">Iniciar Sesión</a>
+                                <a href="login.php" class="btn btn-secondary">Regresar al inicio de sesión</a>
                             </div>
 
                         </form>
